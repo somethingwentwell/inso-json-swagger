@@ -1,0 +1,24 @@
+_id: req_wrk_24c18e800c274783a14edf96f72e89e767fce36e
+type: Request
+parentId: wrk_24c18e800c274783a14edf96f72e89e7
+modified: 1629431522143
+created: 1629431522143
+url: "{{ base_url }}/kong-api-ops/{{ id }}"
+name: /kong-api-ops/{id}
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  token: "{{bearerToken}}"
+  prefix: ""
+metaSortKey: -1629431522143
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

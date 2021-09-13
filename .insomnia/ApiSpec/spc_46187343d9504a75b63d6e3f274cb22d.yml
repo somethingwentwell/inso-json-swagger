@@ -1,0 +1,1108 @@
+_id: spc_46187343d9504a75b63d6e3f274cb22d
+type: ApiSpec
+parentId: wrk_24c18e800c274783a14edf96f72e89e7
+modified: 1631516300090
+created: 1629431524170
+fileName: DOCUMENTATION 1.0.0
+contents: >-
+  {
+      "openapi": "3.0.0",
+      "info": {
+        "version": "1.0.0",
+        "title": "DOCUMENTATION",
+        "description": "",
+        "termsOfService": "YOUR_TERMS_OF_SERVICE_URL",
+        "contact": {
+          "name": "TEAM",
+          "email": "contact-email@something.io",
+          "url": "mywebsite.io"
+        },
+        "license": {
+          "name": "Apache 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "x-generation-date": "08/10/2021 3:19:06 AM"
+      },
+      "x-strapi-config": {
+        "path": "/documentation",
+        "showGeneratedFiles": true,
+        "generateDefaultResponse": true
+      },
+      "servers": [
+        {
+          "url": "https://api.successon.cloud",
+          "description": "Development server"
+        }
+      ],
+      "externalDocs": {
+        "description": "Find out more",
+        "url": "https://strapi.io/documentation/developer-docs/latest/getting-started/introduction.html"
+      },
+      "security": [
+        {
+          "bearerAuth": []
+        }
+      ],
+      "paths": {
+        "/kong-api-ops": {
+          "get": {
+            "deprecated": false,
+            "description": "Find all the kong-api-ops's records",
+            "x-kong-plugin-proxy-cache": {
+              "enabled": true,
+              "config": {
+                "cache_ttl": 30,
+                "strategy": "memory"
+              }
+            },
+            "x-kong-plugin-rate-limiting" : {
+              "enabled": true,
+              "config": { "redis_database": 0, "hide_client_headers": false, "path": null, "redis_password": null, "header_name": null, "redis_timeout": 2000, "second": null, "minute": 6, "hour": null, "day": null, "month": null, "year": null, "redis_port": 6379, "redis_host": null, "fault_tolerant": false, "policy": "cluster", "limit_by": "consumer" }
+            },
+            "responses": {
+              "200": {
+                "description": "Retrieve kong-api-ops document(s)",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "properties": {
+                        "foo": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "403": {
+                "description": "Forbidden",
+                "content": {
+                  "application/json": {
+                    "schema": {
+
+                    }
+                  }
+                }
+              },
+              "404": {
+                "description": "Not found",
+                "content": {
+                  "application/json": {
+                    "schema": {
+
+                    }
+                  }
+                }
+              },
+              "default": {
+                "description": "unexpected error",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/Error"
+                    }
+                  }
+                }
+              }
+            },
+            "summary": "",
+            "tags": [
+              "Kong-api-ops"
+            ],
+            "parameters": [
+              {
+                "name": "_limit",
+                "in": "query",
+                "required": false,
+                "description": "Maximum number of results possible",
+                "schema": {
+                  "type": "integer"
+                },
+                "deprecated": false
+              },
+              {
+                "name": "_sort",
+                "in": "query",
+                "required": false,
+                "description": "Sort according to a specific field.",
+                "schema": {
+                  "type": "string"
+                },
+                "deprecated": false
+              },
+              {
+                "name": "_start",
+                "in": "query",
+                "required": false,
+                "description": "Skip a specific number of entries (especially useful for pagination)",
+                "schema": {
+                  "type": "integer"
+                },
+                "deprecated": false
+              },
+              {
+                "name": "=",
+                "in": "query",
+                "required": false,
+                "description": "Get entries that matches exactly your input",
+                "schema": {
+                  "type": "string"
+                },
+                "deprecated": false
+              },
+              {
+                "name": "_ne",
+                "in": "query",
+                "required": false,
+                "description": "Get records that are not equals to something",
+                "schema": {
+                  "type": "string"
+                },
+                "deprecated": false
+              },
+              {
+                "name": "_lt",
+                "in": "query",
+                "required": false,
+                "description": "Get record that are lower than a value",
+                "schema": {
+                  "type": "string"
+                },
+                "deprecated": false
+              },
+              {
+                "name": "_lte",
+                "in": "query",
+                "required": false,
+                "description": "Get records that are lower than or equal to a value",
+                "schema": {
+                  "type": "string"
+                },
+                "deprecated": false
+              },
+              {
+                "name": "_gt",
+                "in": "query",
+                "required": false,
+                "description": "Get records that are greater than a value",
+                "schema": {
+                  "type": "string"
+                },
+                "deprecated": false
+              },
+              {
+                "name": "_gte",
+                "in": "query",
+                "required": false,
+                "description": "Get records that are greater than  or equal a value",
+                "schema": {
+                  "type": "string"
+                },
+                "deprecated": false
+              },
+              {
+                "name": "_contains",
+                "in": "query",
+                "required": false,
+                "description": "Get records that contains a value",
+                "schema": {
+                  "type": "string"
+                },
+                "deprecated": false
+              },
+              {
+                "name": "_containss",
+                "in": "query",
+                "required": false,
+                "description": "Get records that contains (case sensitive) a value",
+                "schema": {
+                  "type": "string"
+                },
+                "deprecated": false
+              },
+              {
+                "name": "_in",
+                "in": "query",
+                "required": false,
+                "description": "Get records that matches any value in the array of values",
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "deprecated": false
+              },
+              {
+                "name": "_nin",
+                "in": "query",
+                "required": false,
+                "description": "Get records that doesn't match any value in the array of values",
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "deprecated": false
+              }
+            ]
+          },
+          "post": {
+            "deprecated": false,
+            "description": "Create a new kong-api-ops record",
+            "responses": {
+              "200": {
+                "description": "Retrieve kong-api-ops document(s)",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "properties": {
+                        "foo": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "403": {
+                "description": "Forbidden",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/Error"
+                    }
+                  }
+                }
+              },
+              "404": {
+                "description": "Not found",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/Error"
+                    }
+                  }
+                }
+              },
+              "default": {
+                "description": "unexpected error",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/Error"
+                    }
+                  }
+                }
+              }
+            },
+            "summary": "",
+            "tags": [
+              "Kong-api-ops"
+            ],
+            "requestBody": {
+              "description": "",
+              "required": true,
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/NewKong-api-ops"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "/kong-api-ops/count": {
+          "get": {
+            "deprecated": false,
+            "description": "Retrieve the numver of kong-api-ops documents",
+            "responses": {
+              "200": {
+                "description": "Retrieve kong-api-ops document(s)",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "properties": {
+                        "foo": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "403": {
+                "description": "Forbidden",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/Error"
+                    }
+                  }
+                }
+              },
+              "404": {
+                "description": "Not found",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/Error"
+                    }
+                  }
+                }
+              },
+              "default": {
+                "description": "unexpected error",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/Error"
+                    }
+                  }
+                }
+              }
+            },
+            "summary": "",
+            "tags": [
+              "Kong-api-ops"
+            ],
+            "parameters": []
+          }
+        },
+        "/kong-api-ops/{id}": {
+          "get": {
+            "deprecated": false,
+            "description": "Find one kong-api-ops record",
+            "responses": {
+              "200": {
+                "description": "Retrieve kong-api-ops document(s)",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "properties": {
+                        "foo": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "403": {
+                "description": "Forbidden",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/Error"
+                    }
+                  }
+                }
+              },
+              "404": {
+                "description": "Not found",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/Error"
+                    }
+                  }
+                }
+              },
+              "default": {
+                "description": "unexpected error",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/Error"
+                    }
+                  }
+                }
+              }
+            },
+            "summary": "",
+            "tags": [
+              "Kong-api-ops"
+            ],
+            "parameters": [
+              {
+                "name": "id",
+                "in": "path",
+                "description": "",
+                "deprecated": false,
+                "required": true,
+                "schema": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "put": {
+            "deprecated": false,
+            "description": "Update a single kong-api-ops record",
+            "responses": {
+              "200": {
+                "description": "Retrieve kong-api-ops document(s)",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "properties": {
+                        "foo": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "403": {
+                "description": "Forbidden",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/Error"
+                    }
+                  }
+                }
+              },
+              "404": {
+                "description": "Not found",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/Error"
+                    }
+                  }
+                }
+              },
+              "default": {
+                "description": "unexpected error",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/Error"
+                    }
+                  }
+                }
+              }
+            },
+            "summary": "",
+            "tags": [
+              "Kong-api-ops"
+            ],
+            "requestBody": {
+              "description": "",
+              "required": true,
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/NewKong-api-ops"
+                  }
+                }
+              }
+            },
+            "parameters": [
+              {
+                "name": "id",
+                "in": "path",
+                "description": "",
+                "deprecated": false,
+                "required": true,
+                "schema": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "delete": {
+            "deprecated": false,
+            "description": "Delete a single kong-api-ops record",
+            "responses": {
+              "200": {
+                "description": "deletes a single kong-api-ops based on the ID supplied",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "integer",
+                      "format": "int64"
+                    }
+                  }
+                }
+              },
+              "403": {
+                "description": "Forbidden",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/Error"
+                    }
+                  }
+                }
+              },
+              "404": {
+                "description": "Not found",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/Error"
+                    }
+                  }
+                }
+              },
+              "default": {
+                "description": "unexpected error",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/Error"
+                    }
+                  }
+                }
+              }
+            },
+            "summary": "",
+            "tags": [
+              "Kong-api-ops"
+            ],
+            "parameters": [
+              {
+                "name": "id",
+                "in": "path",
+                "description": "",
+                "deprecated": false,
+                "required": true,
+                "schema": {
+                  "type": "string"
+                }
+              }
+            ]
+          }
+        },
+        "/users": {
+          "get": {
+            "deprecated": false,
+            "description": "Retrieve all user documents",
+            "responses": {
+              "200": {
+                "description": "response",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "array",
+                      "items": {
+
+                      }
+                    }
+                  }
+                }
+              },
+              "403": {
+                "description": "Forbidden",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/Error"
+                    }
+                  }
+                }
+              },
+              "404": {
+                "description": "Not found",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/Error"
+                    }
+                  }
+                }
+              },
+              "default": {
+                "description": "unexpected error",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/Error"
+                    }
+                  }
+                }
+              }
+            },
+            "summary": "",
+            "tags": [
+              "UsersPermissions - User"
+            ],
+            "parameters": [
+              {
+                "name": "_limit",
+                "in": "query",
+                "required": false,
+                "description": "Maximum number of results possible",
+                "schema": {
+                  "type": "integer"
+                },
+                "deprecated": false
+              },
+              {
+                "name": "_sort",
+                "in": "query",
+                "required": false,
+                "description": "Sort according to a specific field.",
+                "schema": {
+                  "type": "string"
+                },
+                "deprecated": false
+              },
+              {
+                "name": "_start",
+                "in": "query",
+                "required": false,
+                "description": "Skip a specific number of entries (especially useful for pagination)",
+                "schema": {
+                  "type": "integer"
+                },
+                "deprecated": false
+              },
+              {
+                "name": "=",
+                "in": "query",
+                "required": false,
+                "description": "Get entries that matches exactly your input",
+                "schema": {
+                  "type": "string"
+                },
+                "deprecated": false
+              },
+              {
+                "name": "_ne",
+                "in": "query",
+                "required": false,
+                "description": "Get records that are not equals to something",
+                "schema": {
+                  "type": "string"
+                },
+                "deprecated": false
+              },
+              {
+                "name": "_lt",
+                "in": "query",
+                "required": false,
+                "description": "Get record that are lower than a value",
+                "schema": {
+                  "type": "string"
+                },
+                "deprecated": false
+              },
+              {
+                "name": "_lte",
+                "in": "query",
+                "required": false,
+                "description": "Get records that are lower than or equal to a value",
+                "schema": {
+                  "type": "string"
+                },
+                "deprecated": false
+              },
+              {
+                "name": "_gt",
+                "in": "query",
+                "required": false,
+                "description": "Get records that are greater than a value",
+                "schema": {
+                  "type": "string"
+                },
+                "deprecated": false
+              },
+              {
+                "name": "_gte",
+                "in": "query",
+                "required": false,
+                "description": "Get records that are greater than  or equal a value",
+                "schema": {
+                  "type": "string"
+                },
+                "deprecated": false
+              },
+              {
+                "name": "_contains",
+                "in": "query",
+                "required": false,
+                "description": "Get records that contains a value",
+                "schema": {
+                  "type": "string"
+                },
+                "deprecated": false
+              },
+              {
+                "name": "_containss",
+                "in": "query",
+                "required": false,
+                "description": "Get records that contains (case sensitive) a value",
+                "schema": {
+                  "type": "string"
+                },
+                "deprecated": false
+              },
+              {
+                "name": "_in",
+                "in": "query",
+                "required": false,
+                "description": "Get records that matches any value in the array of values",
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "deprecated": false
+              },
+              {
+                "name": "_nin",
+                "in": "query",
+                "required": false,
+                "description": "Get records that doesn't match any value in the array of values",
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "deprecated": false
+              }
+            ]
+          }
+        },
+        "/users/me": {
+          "get": {
+            "deprecated": false,
+            "description": "Retrieve the logged in user information",
+            "responses": {
+              "200": {
+                "description": "response",
+                "content": {
+                  "application/json": {
+                    "schema": {
+
+                    }
+                  }
+                }
+              },
+              "403": {
+                "description": "Forbidden",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/Error"
+                    }
+                  }
+                }
+              },
+              "404": {
+                "description": "Not found",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/Error"
+                    }
+                  }
+                }
+              },
+              "default": {
+                "description": "unexpected error",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/Error"
+                    }
+                  }
+                }
+              }
+            },
+            "summary": "",
+            "tags": [
+              "UsersPermissions - User"
+            ],
+            "parameters": []
+          }
+        },
+        "/users/{id}": {
+          "get": {
+            "deprecated": false,
+            "description": "Retrieve a single user depending on his id",
+            "responses": {
+              "200": {
+                "description": "response",
+                "content": {
+                  "application/json": {
+                    "schema": {
+
+                    }
+                  }
+                }
+              },
+              "403": {
+                "description": "Forbidden",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/Error"
+                    }
+                  }
+                }
+              },
+              "404": {
+                "description": "Not found",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/Error"
+                    }
+                  }
+                }
+              },
+              "default": {
+                "description": "unexpected error",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/Error"
+                    }
+                  }
+                }
+              }
+            },
+            "summary": "",
+            "tags": [
+              "UsersPermissions - User"
+            ],
+            "parameters": [
+              {
+                "name": "id",
+                "in": "path",
+                "description": "",
+                "deprecated": false,
+                "required": true,
+                "schema": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "put": {
+            "deprecated": false,
+            "description": "Update an existing user",
+            "responses": {
+              "200": {
+                "description": "response",
+                "content": {
+                  "application/json": {
+                    "schema": {
+
+                    }
+                  }
+                }
+              },
+              "403": {
+                "description": "Forbidden",
+                "content": {
+                  "application/json": {
+                    "schema": {
+
+                    }
+                  }
+                }
+              },
+              "404": {
+                "description": "Not found",
+                "content": {
+                  "application/json": {
+                    "schema": {
+
+                    }
+                  }
+                }
+              },
+              "default": {
+                "description": "unexpected error",
+                "content": {
+                  "application/json": {
+                    "schema": {
+
+                    }
+                  }
+                }
+              }
+            },
+            "summary": "",
+            "tags": [
+              "UsersPermissions - User"
+            ],
+            "parameters": [
+              {
+                "name": "id",
+                "in": "path",
+                "description": "",
+                "deprecated": false,
+                "required": true,
+                "schema": {
+                  "type": "string"
+                }
+              }
+            ],
+            "requestBody": {
+              "description": "",
+              "required": true,
+              "content": {
+                "application/json": {
+                  "schema": {
+
+                  }
+                }
+              }
+            }
+          },
+          "delete": {
+            "deprecated": false,
+            "description": "Delete an existing user",
+            "responses": {
+              "200": {
+                "description": "response",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "properties": {
+                        "foo": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "403": {
+                "description": "Forbidden",
+                "content": {
+                  "application/json": {
+                    "schema": {
+
+                    }
+                  }
+                }
+              },
+              "404": {
+                "description": "Not found",
+                "content": {
+                  "application/json": {
+                    "schema": {
+
+                    }
+                  }
+                }
+              },
+              "default": {
+                "description": "unexpected error",
+                "content": {
+                  "application/json": {
+                    "schema": {
+
+                    }
+                  }
+                }
+              }
+            },
+            "summary": "",
+            "tags": [
+              "UsersPermissions - User"
+            ],
+            "parameters": [
+              {
+                "name": "id",
+                "in": "path",
+                "description": "",
+                "deprecated": false,
+                "required": true,
+                "schema": {
+                  "type": "string"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "components": {
+        "schemas": {
+          "Kong-api-ops": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "content": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string",
+                "format": "date-time"
+              }
+            }
+          },
+          "NewKong-api-ops": {
+            "properties": {
+              "content": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "Error": {
+            "required": [
+              "code",
+              "message"
+            ],
+            "properties": {
+              "code": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          "UsersPermissionsUser": {}
+        },
+        "securitySchemes": {
+          "bearerAuth": {
+            "type": "http",
+            "scheme": "bearer",
+            "bearerFormat": "JWT"
+          }
+        }
+      },
+      "tags": [
+        {
+          "name": "Email - Email"
+        },
+        {
+          "name": "Upload - File"
+        },
+        {
+          "name": "UsersPermissions - Role"
+        },
+        {
+          "name": "UsersPermissions - User"
+        }
+      ]
+    }
+contentType: yaml

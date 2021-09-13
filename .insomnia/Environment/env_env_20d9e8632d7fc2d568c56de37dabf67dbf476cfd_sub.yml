@@ -1,0 +1,15 @@
+_id: env_env_20d9e8632d7fc2d568c56de37dabf67dbf476cfd_sub
+type: Environment
+parentId: env_20d9e8632d7fc2d568c56de37dabf67dbf476cfd
+modified: 1629431522158
+created: 1629431522158
+name: OpenAPI env
+data:
+  scheme: https
+  base_path: ""
+  host: api.successon.cloud
+  bearerToken: bearerToken
+dataPropertyOrder: null
+color: null
+isPrivate: false
+metaSortKey: 1629431522158

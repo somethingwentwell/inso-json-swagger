@@ -1,0 +1,24 @@
+_id: req_wrk_24c18e800c274783a14edf96f72e89e71023b84f
+type: Request
+parentId: fld_wrk_24c18e800c274783a14edf96f72e89e76681d7d7
+modified: 1629431522126
+created: 1629431522126
+url: "{{ base_url }}/users/{{ id }}"
+name: /users/{id}
+description: ""
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  token: "{{bearerToken}}"
+  prefix: ""
+metaSortKey: -1629431522126
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

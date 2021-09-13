@@ -1,0 +1,77 @@
+_id: req_wrk_24c18e800c274783a14edf96f72e89e7615df464
+type: Request
+parentId: wrk_24c18e800c274783a14edf96f72e89e7
+modified: 1629431603566
+created: 1629431522147
+url: "{{ base_url }}/kong-api-ops"
+name: /kong-api-ops
+description: ""
+method: GET
+body: {}
+parameters:
+  - name: _limit
+    disabled: true
+    value: "0"
+    id: pair_f0ba80782a5549a784f91445553e8784
+  - name: _sort
+    disabled: true
+    value: string
+    id: pair_099b33a401c046d9bbe5e999214b6ed4
+  - name: _start
+    disabled: true
+    value: "0"
+    id: pair_0bac00af116e4a7c83e56bc270c9ead6
+  - name: =
+    disabled: true
+    value: string
+    id: pair_77592ec9983e47d2817bb61552aa192a
+  - name: _ne
+    disabled: true
+    value: string
+    id: pair_02629e402fbd4a7f8090bc13bad04af2
+  - name: _lt
+    disabled: true
+    value: string
+    id: pair_fd214bfc79c442b1a1b06eb2d52171cc
+  - name: _lte
+    disabled: true
+    value: string
+    id: pair_c9a59d39c61547978ec911f639702fe6
+  - name: _gt
+    disabled: true
+    value: string
+    id: pair_d20877b9f372442f837432317620eb7b
+  - name: _gte
+    disabled: true
+    value: string
+    id: pair_cf6e504b63504fb281f0512103c68cc0
+  - name: _contains
+    disabled: true
+    value: string
+    id: pair_0939e871d1b648cb9dc7288817467dd9
+  - name: _containss
+    disabled: true
+    value: string
+    id: pair_c31be573f0bf4a7bbaa3fd81913cdb99
+  - name: _in
+    disabled: true
+    value: string
+    id: pair_00f0b15e97244e23ba4e4ae866f4f701
+  - name: _nin
+    disabled: true
+    value: string
+    id: pair_4a5fd7321ae640728b06ba398f9e1025
+headers: []
+authentication:
+  type: bearer
+  token: "{{bearerToken}}"
+  prefix: ""
+  disabled: true
+metaSortKey: -1629431522147
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
